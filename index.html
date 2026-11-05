@@ -57,20 +57,21 @@
         <div class="transcript"><span id="words">Пришлю макет в пятницу.</span><i aria-hidden="true"></i></div>
       </div>
     </section>
-    <button class="cta" data-install>Как установить <span aria-hidden="true">↗</span></button>
+    <a class="cta" href="https://github.com/mikhailborodin/dicto.me/releases/download/v0.1.0/Dicto-0.1.0-arm64.dmg">Скачать для Mac <span aria-hidden="true">↓</span></a>
     <p class="requirements">Apple Silicon · macOS 15+ · от 16 ГБ</p>
     <p class="sr" id="announcement" role="status"></p>
   </main>
   <dialog aria-labelledby="install-heading">
     <button class="close" aria-label="Закрыть">×</button>
     <h2 id="install-heading">Установка на Mac</h2>
-    <p>Для сборки из исходников нужны Mac с Apple Silicon, 16 ГБ памяти, macOS 15 или новее, Xcode со Swift 6, Git и Python 3.12.</p>
+    <p>Нужен Mac с Apple Silicon, 16 ГБ памяти и macOS 15 или новее.</p>
     <ol>
-      <li>В каталоге проекта укажите сертификат подписи через <code>VOICE_SECRETARY_SIGN_IDENTITY</code>.</li>
-      <li>Загрузите модели распознавания и разделения голосов.<pre>./script/bootstrap_local_ai.sh
-./script/bootstrap_local_ai.sh --diarization</pre></li>
-      <li>Соберите и запустите приложение.<pre>./script/build_and_run.sh</pre></li>
+      <li>Скачайте и откройте образ Dicto.dmg.</li>
+      <li>Перетащите Dicto в папку Applications и откройте приложение.</li>
+      <li>Нажмите «Скачать модели» — потребуется интернет и около 6 ГБ свободного места. Объём загрузки — около 4,5 ГБ.</li>
+      <li>Разрешите доступ к микрофону. Для вставки текста в другие приложения включите «Универсальный доступ» для Dicto.</li>
     </ol>
+    <p>После загрузки моделей речь обрабатывается на вашем Mac.</p>
   </dialog>
 </body>
 </html>
