@@ -45,7 +45,9 @@ h1 { margin: calc(24 * var(--unit)) 0 calc(12 * var(--unit)); font-size: clamp(4
 .transcript { width: 48%; text-align: left; font-size: max(18px, calc(25 * var(--unit))); line-height: 1.24; letter-spacing: -.023em; white-space: pre-line; }
 .transcript i { display: inline-block; width: 2px; height: 1em; margin-left: 4px; background: var(--orange); vertical-align: -.08em; }
 .cta { margin-top: calc(35 * var(--unit)); background: var(--paper); color: #131311; border-radius: 10px; padding: calc(13 * var(--unit)) calc(52 * var(--unit)); font-size: max(19px, calc(25 * var(--unit))); font-weight: 650; }
+.cta { display: inline-block; text-decoration: none; }
 .cta:hover { background: white; }
+.cta:focus-visible { outline: 2px solid var(--paper); outline-offset: 5px; }
 .requirements { margin: calc(12 * var(--unit)) 0; font-size: max(13px, calc(18 * var(--unit))); color: var(--muted); }
 dialog { max-width: min(540px, 92vw); border: 1px solid #555; border-radius: 18px; padding: 32px; background: #151515; color: var(--paper); }
 dialog::backdrop { background: #000b; }
