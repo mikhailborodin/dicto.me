@@ -8,10 +8,18 @@ if (location.hostname === 'dicto.me' && Number.isSafeInteger(dictoCounterId) && 
 
   const tag = document.createElement('script');
   tag.async = true;
-  tag.src = 'https://mc.yandex.ru/metrika/tag.js';
+  tag.src = 'https://mc.yandex.ru/metrika/tag.js?id=' + dictoCounterId;
   document.head.append(tag);
 
-  window.ym(dictoCounterId, 'init', { webvisor: false, clickmap: false, trackLinks: false });
+  window.ym(dictoCounterId, 'init', {
+    ssr: true,
+    url: location.href,
+    referrer: document.referrer,
+    accurateTrackBounce: true,
+    webvisor: false,
+    clickmap: false,
+    trackLinks: false
+  });
 }
 
 function trackDictoGoal(goal, params) {
