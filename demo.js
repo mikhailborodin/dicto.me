@@ -72,6 +72,7 @@ function stop(state = 'idle') {
 
 function start() {
   stop();
+  trackDictoGoal('dicto_demo_started', { demo_mode: mode });
   const example = examples[mode];
   const run = { audio: new Audio(example.file), frame: 0, silentStart: null };
   playback = run;
@@ -128,3 +129,7 @@ for (const button of document.querySelectorAll('[data-install]')) {
 dialog.querySelector('.close').addEventListener('click', () => dialog.close());
 window.addEventListener('pagehide', () => stop());
 drawWave();
+
+document.querySelector('.cta').addEventListener('click', () => {
+  trackDictoGoal('dicto_download_clicked');
+});
